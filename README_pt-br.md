@@ -2,7 +2,7 @@
 
 # Site do Projeto Debian reimaginado :penguin:
 
-> :us: If you prefer to read in another language, this README was also written in english. Click [HERE](https://github.com/lucasmc64/debian-website-reimagined/blob/main/README.md) to access.
+> :us: If you prefer to read in another language, this README was also written in english. Click [HERE](https://github.com/lucasmc64/debian-website-reimagined/blob/master/README.md) to access.
 
 ## Objetivo :dart:
 

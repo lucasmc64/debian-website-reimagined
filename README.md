@@ -2,7 +2,7 @@
 
 # Project Debian website reimagined :penguin:
 
-> :brazil: Caso prefira ler em outra língua, esse README foi escrito também em português. Clique [AQUI](https://github.com/lucasmc64/debian-website-reimagined/blob/main/README_pt-br.md) para acessar.
+> :brazil: Caso prefira ler em outra língua, esse README foi escrito também em português. Clique [AQUI](https://github.com/lucasmc64/debian-website-reimagined/blob/master/README_pt-br.md) para acessar.
 
 ## Goal :dart:
 
