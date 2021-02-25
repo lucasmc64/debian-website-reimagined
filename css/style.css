@@ -99,7 +99,10 @@ footer nav ul li a {
     max-width: 940px;
     margin: 0 auto;
 }
-
+.container-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px 3px var(--debian-11-green);
+}
 .background {
     width: 100%;
     padding: 60px 0;
