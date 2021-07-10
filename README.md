@@ -2,8 +2,6 @@
 
 # :penguin: Project Debian website reimagined 
 
-> :brazil: Caso prefira ler em outra língua, esse README foi escrito também em português. Clique [AQUI](/README_pt-br.md) para acessar.
-
 ## :dart: Goal 
 
 I noticed a while ago that the [Debian Project](https://www.debian.org/) main page had undergone some changes, but only this week I saw the blog post stating that this is just the beginning and that big changes will come. With that in mind, I took the liberty of reimagining the site based on the theme chosen for the next version of the distro: [Homeworld](https://github.com/julietteTaka/homeworld).
@@ -27,3 +25,11 @@ There are no requirements to run the project on your computer! Just double click
 ## :tada: If everything went well... 
 
 Now you are running the project beautifully!
+
+## :memo: License
+
+This project is under the MIT license. See the [LICENSE](LICENSE) for more information.
+
+---
+
+Made with :blue_heart: by Lucas Coutinho :wave: [Get in touch!](https://www.linkedin.com/in/lucasmc64/)
