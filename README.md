@@ -28,7 +28,7 @@ Now you are running the project beautifully!
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](LICENSE) for more information.
+This project is under the GNU General Public License v2.0 license. See the [LICENSE](LICENSE) for more information.
 
 ---
 
