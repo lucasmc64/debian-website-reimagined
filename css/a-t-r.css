@@ -1,17 +1,17 @@
 /* =-=-=-=-=- Animations -=-=-=-=-= */
 
 @keyframes arrow-movement {
-    0% {
-        background-position: center bottom;
-    }
+  0% {
+    background-position: center bottom;
+  }
 
-    50% {
-        background-position: center 95%;
-    }
+  50% {
+    background-position: center 95%;
+  }
 
-    100% {
-        background-position: center bottom;
-    }
+  100% {
+    background-position: center bottom;
+  }
 }
 
 /* =-=-=-=-=- Transitions -=-=-=-=-= */
@@ -19,329 +19,330 @@
 /* Link effect */
 
 nav ul li a::after {
-    content: '';
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li:hover a::after {
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
+
+/* Button effect */
+
+.button:hover {
+  box-shadow: 0 0 16px 0 var(--debian-11-green);
+  color: white;
+}
+
+/* =-=-=-=-=- Responsiveness -=-=-=-=-= */
+
+@media screen and (max-width: 960px) {
+  /* =-=-=-=-=- Global -=-=-=-=-= */
+
+  .container {
+    max-width: 769px;
+  }
+
+  /* =-=-=-=-=- Why Debian -=-=-=-=-= */
+
+  .why-deb section {
+    background: none;
+  }
+
+  /* =-=-=-=-=- Apps -=-=-=-=-= */
+
+  .apps {
+    background: url("../svg/apps-green-blocks.svg") left calc(100% - 132px) /
+        12% no-repeat,
+      url("../svg/apps-black-blocks.svg") right calc(100% - 132px) / 12%
+        no-repeat,
+      white;
+  }
+
+  .apps section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .apps section div div p {
+    max-width: 700px;
+  }
+
+  .apps section div img {
+    margin-top: 0;
+    width: 464px;
+    align-self: center;
+  }
+
+  /* =-=-=-=-=- Debian uses -=-=-=-=-= */
+  .deb-uses section div {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "enterprise development"
+      "end-user end-user";
+    gap: 16px;
+  }
+
+  .deb-uses section div section:nth-child(1) {
+    grid-area: enterprise;
+  }
+
+  .deb-uses section div section:nth-child(2) {
+    grid-area: development;
+  }
+
+  .deb-uses section div section:nth-child(3) {
+    grid-area: end-user;
+  }
+
+  .deb-uses section div section:nth-child(3) ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 48px;
+  }
+
+  /* =-=-=-=-=- Community -=-=-=-=-= */
+
+  .community {
+    padding-top: 60px;
+    padding-bottom: 145px;
+    margin-top: 0;
+    background: url("../svg/community-blocks-2.svg") center 120% / 600px
+        no-repeat,
+      white;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* =-=-=-=-=- Global -=-=-=-=-= */
+  .container {
+    max-width: 320px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-top: 14px;
+  }
+
+  ul,
+  ol {
+    gap: 14px;
+  }
+
+  ul li,
+  ol li {
+    font-size: 14px;
+  }
+
+  header nav ul,
+  footer nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 14px;
+  }
+
+  header nav ul li,
+  footer nav ul li {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  header nav ul li a,
+  footer nav ul li a {
+    display: inline-block;
+    padding: 14px 0;
+  }
+
+  nav ul li a::after {
+    content: "";
     width: 0;
     height: 2px;
     border-radius: 1px;
     background: white;
     position: absolute;
     left: 50%;
-    bottom: -4px;
+    bottom: 10px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-}
+  }
 
-nav ul li:hover a::after {
+  nav ul li:hover a::after {
     left: 0;
     opacity: 1;
     width: 100%;
-}
+  }
 
-/* Button effect */
+  /* =-=-=-=-=- Header -=-=-=-=-= */
 
-.button:hover {
-    box-shadow: 0 0 16px 0 var(--debian-11-green);
-    color: white;
-}
+  header {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
 
-/* =-=-=-=-=- Responsiveness -=-=-=-=-= */
+  header > a {
+    justify-self: center;
+    float: left;
+  }
 
-@media screen and (max-width: 960px) {
-    /* =-=-=-=-=- Global -=-=-=-=-= */
+  header form {
+    width: 320px;
+    margin: 0 auto;
+  }
 
-    .container {
-        max-width: 769px;
-    }
+  header form input {
+    height: 48px;
+    padding: 16px 24px;
+    font-size: 14px;
+  }
 
-    /* =-=-=-=-=- Why Debian -=-=-=-=-= */
+  header form button {
+    padding: 12px;
+    right: 4px;
+  }
 
-    .why-deb section {
-        background: none;
-    }
+  header select {
+    width: initial;
+    height: initial;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 8px 16px 12px;
+  }
 
-    /* =-=-=-=-=- Apps -=-=-=-=-= */
+  /* =-=-=-=-=- Presentation -=-=-=-=-= */
 
-    .apps {
-        background: 
-            url('../svg/apps-green-blocks.svg') left calc(100% - 132px) / 12% no-repeat,
-            url('../svg/apps-black-blocks.svg') right calc(100% - 132px) / 12% no-repeat,
-            white;
-    }
-    
-    .apps section > div {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
-    
-    .apps section div div p {
-        max-width: 700px;
-    }
-    
-    .apps section div img {
-        margin-top: 0;
-        width: 464px;
-        align-self: center;
-    }
-    
-    /* =-=-=-=-=- Debian uses -=-=-=-=-= */
-    .deb-uses section div {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            'enterprise development'
-            'end-user end-user';
-        gap: 16px;
-    }
+  section.presentation h2 {
+    font-size: 20px;
+  }
 
-    .deb-uses section div section:nth-child(1) {
-        grid-area: enterprise;
-    }
+  .background.black:first-of-type {
+    height: 900px;
+    background: linear-gradient(
+        180deg,
+        var(--debian-11-black) 56%,
+        transparent 56%
+      ),
+      url("../img/homeworld-art-1.png") center 100% / 1040px no-repeat,
+      var(--debian-11-black);
+  }
 
-    .deb-uses section div section:nth-child(2) {
-        grid-area: development;
-    }
+  /* =-=-=-=-=- What’s new -=-=-=-=-= */
 
-    .deb-uses section div section:nth-child(3) {
-        grid-area: end-user;
-    }
+  .background.almost-white.news {
+    background: url("../img/homeworld-art-2.png") right 100% / 40% no-repeat
+      var(--debian-11-almost-white);
+  }
 
-    .deb-uses section div section:nth-child(3) ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px 48px;
-    }
+  /* =-=-=-=-=- Why Debian -=-=-=-=-= */
 
-    /* =-=-=-=-=- Community -=-=-=-=-= */
+  .why-deb section ol {
+    margin-top: 20px;
+  }
 
-    .community {
-        padding-top: 60px;
-        padding-bottom: 145px;
-        margin-top: 0;
-        background: 
-            url('../svg/community-blocks-2.svg') center 120% / 600px no-repeat,
-            white;
-    }
+  /* =-=-=-=-=- Apps -=-=-=-=-= */
 
-}
+  .apps {
+    background: url("../svg/apps-green-blocks.svg") left 24px / 16% no-repeat,
+      url("../svg/apps-black-blocks.svg") right calc(100% - 24px) / 16%
+        no-repeat,
+      white;
+  }
 
-@media screen and (max-width: 800px) {
-    /* =-=-=-=-=- Global -=-=-=-=-= */
-    .container {
-        max-width: 320px;
-    }
+  .apps section div img {
+    width: 320px;
+  }
 
-    h2 {
-        font-size: 36px;
-        line-height: 44px;
-    }
-    
-    h3 {
-        font-size: 24px;
-        line-height: 32px;
-        margin-top: 10px;
-    }
-    
-    p {
-        font-size: 16px;
-        margin-top: 14px;
-    }
+  /* =-=-=-=-=- Debian uses -=-=-=-=-= */
 
-    ul,
-    ol {
-        gap: 14px;
-    }
+  .deb-uses {
+    background: url("../svg/deb-uses-blocks.svg") center 20px / 360px no-repeat,
+      var(--debian-11-almost-white);
+  }
 
-    ul li,
-    ol li {
-        font-size: 14px;
-    }
+  .deb-uses section div {
+    grid-template-columns: initial;
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    header nav ul,
-    footer nav ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4px 14px;
-    }
+  .deb-uses section div section:nth-child(1) {
+    grid-area: none;
+  }
 
-    header nav ul li,
-    footer nav ul li {
-        margin: 0 auto;
-        text-align: center;
-    }
+  .deb-uses section div section:nth-child(2) {
+    grid-area: none;
+  }
 
-    header nav ul li a,
-    footer nav ul li a {
-        display: inline-block;
-        padding: 14px 0;
-    }
+  .deb-uses section div section:nth-child(3) {
+    grid-area: none;
+  }
 
-    nav ul li a::after {
-        content: '';
-        width: 0;
-        height: 2px;
-        border-radius: 1px;
-        background: white;
-        position: absolute;
-        left: 50%;
-        bottom: 10px;
-        opacity: 0;
-        transition: all 0.2s ease-in-out;
-    }
-    
-    nav ul li:hover a::after {
-        left: 0;
-        opacity: 1;
-        width: 100%;
-    }
+  .deb-uses section div section:nth-child(3) ul {
+    grid-template-columns: initial;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    /* =-=-=-=-=- Header -=-=-=-=-= */
- 
-    header {
-        grid-template-columns: 1fr;
-        justify-content: center;
-    }
+  /* =-=-=-=-=- Community -=-=-=-=-= */
 
-    header > a {
-        justify-self: center;
-        float: left;
-    }
+  /* Everything okay :) */
 
-    header form {
-        width: 320px;
-        margin: 0 auto;
-    }
+  /* =-=-=-=-=- Testimonials -=-=-=-=-= */
 
-    header form input {
-        height: 48px;
-        padding: 16px 24px;
-        font-size: 14px;
-    }
+  .testimonials section {
+    grid-template-columns: 48px 1fr 48px;
+  }
 
-    header form button {
-        padding: 12px;
-        right: 4px;
-    }
+  .testimonials section button {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    header select {
-        width: initial;
-        height: initial;
-        margin: 0 auto;
-        font-size: 16px;
-        padding: 8px 16px 12px;
-    }
+  .testimonials section ul li blockquote p,
+  .testimonials section ul li blockquote cite {
+    font-size: 14px;
+    text-align: center;
+  }
 
-    /* =-=-=-=-=- Presentation -=-=-=-=-= */
+  /* =-=-=-=-=- Footer -=-=-=-=-= */
 
-    section.presentation h2 {
-        font-size: 20px;
-    }
+  footer {
+    background: none;
+  }
 
-    .background.black:first-of-type {
-        height: 900px;
-        background:
-            linear-gradient(180deg, var(--debian-11-black) 56%, transparent 56%),
-            url('../img/homeworld-art-1.png') center 100% / 1040px no-repeat,
-            var(--debian-11-black);
-    }
+  footer div#copyright {
+    gap: 14px;
+    flex-direction: column;
+  }
 
-    /* =-=-=-=-=- What’s new -=-=-=-=-= */
-
-    .background.almost-white.news {
-        background: 
-            url('../img/homeworld-art-2.png') right 100% / 40% no-repeat
-            var(--debian-11-almost-white);
-    }
-
-    /* =-=-=-=-=- Why Debian -=-=-=-=-= */
-
-    .why-deb section ol {
-        margin-top: 20px;
-    }
-
-    /* =-=-=-=-=- Apps -=-=-=-=-= */
-
-    .apps {
-        background: 
-            url('../svg/apps-green-blocks.svg') left 24px / 16% no-repeat,
-            url('../svg/apps-black-blocks.svg') right calc(100% - 24px) / 16% no-repeat,
-            white;
-    }
-
-    .apps section div img {
-        width: 320px;
-    }
-    
-    /* =-=-=-=-=- Debian uses -=-=-=-=-= */
-
-    .deb-uses {
-        background: 
-            url('../svg/deb-uses-blocks.svg') center 20px / 360px no-repeat,
-            var(--debian-11-almost-white);
-    }
-
-    .deb-uses section div {
-        grid-template-columns: initial;
-        grid-template-areas: none;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .deb-uses section div section:nth-child(1) {
-        grid-area: none;
-    }
-
-    .deb-uses section div section:nth-child(2) {
-        grid-area: none;
-    }
-
-    .deb-uses section div section:nth-child(3) {
-        grid-area: none;
-    }
-
-    .deb-uses section div section:nth-child(3) ul {
-        grid-template-columns: initial;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    /* =-=-=-=-=- Community -=-=-=-=-= */
-
-    /* Everything okay :) */
-
-    /* =-=-=-=-=- Testimonials -=-=-=-=-= */
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-    .testimonials section {
-        grid-template-columns: 48px 1fr 48px;
-    }
-    
-    .testimonials section button {
-        height: 48px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .testimonials section ul li blockquote p,
-    .testimonials section ul li blockquote cite {
-        font-size: 14px;
-        text-align: center;
-    }
-    
-    /* =-=-=-=-=- Footer -=-=-=-=-= */
-
-    footer {
-        background: none
-    }
-
-    footer div#copyright {
-        gap: 14px;
-        flex-direction: column;
-    }
-
-    footer div#copyright p {
-        font-size: 12px;
-        text-align: center;
-    }
+  footer div#copyright p {
+    font-size: 12px;
+    text-align: center;
+  }
 }
